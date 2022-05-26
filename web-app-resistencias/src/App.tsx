@@ -10,6 +10,7 @@ function App() {
   const [logData, setLogData] = useState([])
   const [dates, setDates] = useState([])
 
+  // Esta funcion se ejecuta al cargar la aplicacion y se encarga de recuperar los datos de las fechas
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -25,6 +26,11 @@ function App() {
 
   return (
       <div className="container">
+          {
+            /**
+             * Llamamos a los componentes necesarios para que funcione la app
+             */
+          }
           <ParaleloSerie/>
           <Finder setLogData={setLogData} dates={dates}/>
           <LogTable logData={logData} />

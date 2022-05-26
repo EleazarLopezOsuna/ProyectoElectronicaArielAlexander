@@ -13,6 +13,13 @@ export const Finder =  ({setLogData, dates}) => {
                 <select className="form-select" aria-label="Default select example" value={dia} onChange={
                     e => setDia(e.target.value)
                 }>
+                    {
+                        /* 
+                            dates contiene los valores de cada fecha en forma de arreglo.
+                            Por cada item del arreglo se generara una opcion dentro del select en la cual
+                            se mostrara la fecha que contenga.
+                        */
+                    }
                     <option value={1}>Selecciona un dia</option>
                     {
                         dates.map((fecha: string) => (
@@ -22,6 +29,12 @@ export const Finder =  ({setLogData, dates}) => {
                 </select>
             </div>
             <div className="col">
+                {
+                    /*
+                        Hacemos un boton el cual al momento de darle click, enviara una peticion al servidor en el cual.
+                        Obtendra los datos de un dia en especifico
+                    */
+                }
                 <button type="button" className="btn btn-light" onClick={
                     async () => {
                         let url = "http://localhost:5000/dates/" + dia
@@ -36,6 +49,12 @@ export const Finder =  ({setLogData, dates}) => {
                 }/>
             </div>
             <div className="col">
+            {
+                    /*
+                        Hacemos un boton el cual al momento de darle click, enviara una peticion al servidor en el cual.
+                        Obtendra los datos de un id en especifico
+                    */
+                }
                 <button type="button" className="btn btn-light" onClick={
                     async () => {
                         let url = "http://localhost:5000/id/" + id

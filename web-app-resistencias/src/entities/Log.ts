@@ -1,3 +1,4 @@
+// Este tipo nos sirve para poder mostrar los datos en la tabla de registros
 export type Log = {
     Id: string;
     Datos: string;

@@ -5,6 +5,7 @@ import "./LogTable.scss"
 // @ts-ignore
 export const LogTable = ({logData}) => {
 
+    // Creamos una tabla con los headers de entities.Log
     return (
         <div className="log-scrollable">
             <table className="log-table">
@@ -18,6 +19,7 @@ export const LogTable = ({logData}) => {
                 </thead>
                 <tbody>
                 {
+                    // Por cada registro que tengamos en logData, se generara una nueva fila dentro de la tabla
                     logData.map((log: {
                         Id: string;
                         Datos: string;
